@@ -2,3 +2,12 @@
   grid-area: c;
   background-color: rgb(62, 95, 206);
 }
+
+.wallPaper {
+  height: 300px;
+  overflow: hidden;
+}
+
+.wallPaper img {
+  width: 100%;
+}
