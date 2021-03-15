@@ -1,7 +1,6 @@
 .dialogs {
     display: grid;
     grid-template-columns: 3fr 10fr;
-    height: 100%;
 }
 
 .dialogsItem {
@@ -34,5 +33,9 @@
 }
 
 .massage {
-
+    padding: 20px;
+    margin: 5px;
+    border: 1px solid white;
+    border-radius: 40%;
+    width: fit-content;
 }

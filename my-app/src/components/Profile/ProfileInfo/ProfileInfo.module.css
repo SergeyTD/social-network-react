@@ -1,0 +1,12 @@
+.wallPaper {
+  height: 300px;
+  overflow: hidden;
+}
+
+.wallPaper img {
+  width: 100%;
+}
+
+.info {
+  padding: 20px;
+}

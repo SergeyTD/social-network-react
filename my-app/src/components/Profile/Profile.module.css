@@ -1,12 +1,3 @@
 .content {
   background-color: rgb(117, 149, 255);
 }
-
-.wallPaper {
-  height: 300px;
-  overflow: hidden;
-}
-
-.wallPaper img {
-  width: 100%;
-}
