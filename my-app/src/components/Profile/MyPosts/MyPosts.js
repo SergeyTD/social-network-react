@@ -3,10 +3,15 @@ import Post from './Post/Post';
 
 const MyPosts = () => {
 
-  let postData = [
+  // Sort of data from server
+  let posts = [
     {id : 1, message : "Hi, how are you?", likesCount : 5},
     {id : 2, message : "It's my first post!", likesCount : 10}
   ]
+
+  // Component
+
+  let postsElement = posts.map(post => <Post message={post.message} likesCount={post.likesCount} />);
 
   return (
     <div className={s.myPosts}>
@@ -16,8 +21,7 @@ const MyPosts = () => {
       </div>
       <h3>My Posts</h3>
       <div className={s.posts}>
-        <Post message={postData[0].message} likesCount={postData[0].likesCount} />
-        <Post message={postData[1].message} likesCount={postData[1].likesCount} />
+        {postsElement}
       </div>
     </div>
   )

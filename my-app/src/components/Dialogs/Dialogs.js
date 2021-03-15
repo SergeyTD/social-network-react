@@ -11,17 +11,18 @@ const DialogItem = (props) => {
   )
 }
 
-const Massage = (props) => {
+const Message = (props) => {
   return (
-    <div className={s.massage}>
-      {props.massage}
+    <div className={s.message}>
+      {props.message}
     </div>
   )
 }
 
 const Dialogs = (props) => {
 
-  let dialogsData = [
+  // Sort of data from server 
+  let dialogs = [
     {id : 1, name : "Alena"},
     {id : 2, name : "Uriy"},
     {id : 3, name : "Valeria"},
@@ -29,25 +30,24 @@ const Dialogs = (props) => {
     {id : 5, name : "Ira"}
   ]
 
-  let messagesData = [
+  let messages = [
     {id : 1, message : "Hi!"},
     {id : 2, message : "How are you?"},
     {id : 3, message : "Nice!"}
   ]
 
+  // Component
+
+  let dialogsElements = dialogs.map(dialog => <DialogItem name={dialog.name} id={dialog.id} />);
+  let messagesElements = messages.map(message => <Message message={message.message} />);
+
   return (
     <div className={s.dialogs}>
       <section className={s.dialogsItem}>
-        <DialogItem name={dialogsData[0].name} id={dialogsData[0].id} />
-        <DialogItem name={dialogsData[1].name} id={dialogsData[1].id} />
-        <DialogItem name={dialogsData[2].name} id={dialogsData[2].id} />
-        <DialogItem name={dialogsData[3].name} id={dialogsData[3].id} />
-        <DialogItem name={dialogsData[4].name} id={dialogsData[4].id} />
+        {dialogsElements}
       </section>
       <section className={s.messages}>
-        <Massage massage={messagesData[0].message} />
-        <Massage massage={messagesData[1].message} />
-        <Massage massage={messagesData[2].message} />
+        {messagesElements}
       </section>
     </div>
   )
