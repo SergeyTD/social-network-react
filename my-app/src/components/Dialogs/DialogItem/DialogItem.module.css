@@ -1,0 +1,7 @@
+.dialog {
+    margin: 10px;
+}
+
+.dialog a.activeLink {
+    color: white;
+}
