@@ -19,10 +19,6 @@
     color: rgb(190, 205, 255);
 }
 
-.dialogsItem a.activeLink {
-    color: white;
-}
-
 .dialog {
     margin: 10px;
 }

@@ -11,18 +11,18 @@ import Setting from './components/Setting/Setting';
 
 
 
-const App = () => {
+const App = (props) => {
   return (
     <BrowserRouter>
       <div className={s.appWrapper}>
         <Header />
         <Navbar />
         <div className={s.appWrapperContent}>
-          <Route path="/profile" component={ Profile } />
-          <Route path="/dialogs" component={ Dialogs } />
-          <Route path="/news" component={ News } />
-          <Route path="/music" component={ Music } />
-          <Route path="/setting" component={ Setting } />
+          <Route path="/profile" render={ () => <Profile posts={props.posts} /> } />
+          <Route path="/dialogs" render={ () => <Dialogs dialogs={props.dialogs} messages={props.messages} /> } />
+          <Route path="/news" render={ () => <News /> } />
+          <Route path="/music" render={ () => <Music /> } />
+          <Route path="/setting" render={ () => <Setting /> } />
         </div>
       </div>
     </BrowserRouter>
