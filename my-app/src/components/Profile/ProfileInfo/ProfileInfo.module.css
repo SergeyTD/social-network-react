@@ -1,9 +1,6 @@
-.wallPaper {
+.wallPaper img {
   height: 300px;
   overflow: hidden;
-}
-
-.wallPaper img {
   width: 100%;
 }
 
